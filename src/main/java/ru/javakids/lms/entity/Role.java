@@ -8,9 +8,10 @@ import java.util.Set;
 
 @Entity
 @Table(name = "roles")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@EqualsAndHashCode(of = "name")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Role {
 

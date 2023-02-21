@@ -1,17 +1,17 @@
 package ru.javakids.lms.entity;
 
-import lombok.AccessLevel;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
-import lombok.NoArgsConstructor;
+
 import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
 
 @Entity
 @Table(name = "tasks")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Task {

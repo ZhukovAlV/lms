@@ -10,9 +10,11 @@ import java.util.Set;
 
 @Entity
 @Table(name = "courses")
-@Data
-@NoArgsConstructor
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(of = "id")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Course {
 

@@ -3,6 +3,7 @@ package ru.javakids.lms.entity;
 import javax.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.Type;
 
 import java.util.Date;
 import java.util.List;
@@ -23,7 +24,7 @@ public class Lesson {
     String title;
 
     @Lob
-  //  @Type(type = "org.hibernate.type.TextType")
+    @Type(type = "org.hibernate.type.TextType")
     @Column
     String text;
 
