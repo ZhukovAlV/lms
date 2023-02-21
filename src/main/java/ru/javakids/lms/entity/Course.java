@@ -1,10 +1,10 @@
 package ru.javakids.lms.entity;
 
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
 

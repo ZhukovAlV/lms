@@ -3,7 +3,7 @@ package ru.javakids.lms.entity;
 import lombok.AccessLevel;
 import lombok.Data;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 

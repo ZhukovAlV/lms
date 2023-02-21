@@ -2,7 +2,7 @@ package ru.javakids.lms.entity;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "course_images")
