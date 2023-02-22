@@ -28,6 +28,14 @@
     align-self: center;
 }
 
+.text-without-note {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #e5e7ea;
+    border-radius: 5px;
+}
+
 #lesson-content textarea {
     height: 300px;
     align-self: center;

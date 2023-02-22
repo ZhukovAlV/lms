@@ -7,7 +7,7 @@ insert into users (password, username) values ('$2a$10$aqo1VUbR8uNEC.xvxKg3oedyz
 insert into courses (author, title) values ('Учебный центр Трайтек', '1 модуль (Java)');
 insert into courses (author, title) values ('Учебный центр Трайтек', '2 модуль (Java)');
 
-insert into lessons (text, title, course_id) values ('1 урок', 'Знакомство с языком программирования Java.', 1);
+insert into lessons (text, title, course_id) values ('<b>1 урок <span style="background-color: rgb(255, 255, 0);">:)</span></b>', 'Знакомство с языком программирования Java.', 1);
 insert into lessons (text, title, course_id) values ('2 урок', 'Работа с переменными.', 1);
 insert into lessons (text, title, course_id) values ('3 урок', 'Основные алгоритмические конструкции.', 1);
 insert into lessons (text, title, course_id) values ('4 урок', 'Основы объектно-ориентированного программирования.', 1);

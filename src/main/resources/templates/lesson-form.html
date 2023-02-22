@@ -35,11 +35,11 @@
                 <div class="label">Содержание урока</div>
                 <textarea id="summernote" th:field="*{text}"
                           th:classappend="${#fields.hasErrors('text')} ? input-error"
-                          th:readonly="${#request.isUserInRole('ADMIN') ? 'false' : 'true'}">
+                          sec:authorize="hasRole('ADMIN')">
                 </textarea>
                 <script>
                     $('#summernote').summernote({
-                        placeholder: 'Hello stand alone ui',
+                        placeholder: 'Содержание должно быть заполнено',
                         tabsize: 2,
                         height: 300,
                         toolbar: [
@@ -53,6 +53,11 @@
                         ]
                     });
                 </script>
+                <div class="text-without-note" th:utext="*{text}"
+                     th:classappend="${#fields.hasErrors('text')} ? input-error"
+                     contenteditable="false"
+                     sec:authorize="hasRole('STUDENT')">
+                </div>
                 <span class="error" th:if="${#fields.hasErrors('text')}" th:errors="*{text}">Содержание урока должно быть заполнено</span>
             </div>
             <button class="custom-button" id="save-les-but" type="submit"
