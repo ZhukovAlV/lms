@@ -38,11 +38,8 @@
                         </button>
                     </form>
                     <form th:method="get" th:action="@{/course/{id}/assign(id = ${course.id})}"
-                          sec:authorize="hasRole('ADMIN') or hasRole('STUDENT')">
-                        <button class="icon-button" title="Подписаться на курс"
-                                th:title="${#request.isUserInRole('ADMIN') ?
-                                        'Добавить пользователя на курс' :
-                                        'Записаться на курс'}">
+                          sec:authorize="hasRole('ADMIN')">
+                        <button class="icon-button" title="Добавить пользователя на курс">
                             <span class="fas fa-user-plus"></span>
                         </button>
                     </form>
@@ -52,7 +49,7 @@
                             <span class="fas fa-edit"></span>
                         </button>
                         <button class="icon-button" sec:authorize="!hasRole('ADMIN')"
-                                title="Информация о курсе">
+                                title="Открыть курс">
                             <span class="fas fa-arrow-circle-right"></span>
                         </button>
                     </form>
