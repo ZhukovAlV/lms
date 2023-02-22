@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title sec:authorize="hasRole('ADMIN')">Редактировать курс</title>
     <title sec:authorize="!hasRole('ADMIN')">Информация о курсе</title>
-    <link rel="stylesheet" th:href="@{/main.css}">
-    <link rel="stylesheet" th:href="@{/course-form.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/course-form.css}">
     <script src="https://kit.fontawesome.com/98a2cf676f.js" crossorigin="anonymous"></script>
 </head>
 <body>

@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <title sec:authorize="hasRole('ADMIN')">Создать урок</title>
     <title sec:authorize="!hasRole('ADMIN')">Информация об уроке</title>
-    <link rel="stylesheet" th:href="@{/main.css}">
-    <link rel="stylesheet" th:href="@{/lesson-form.css}">
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+    <link th:href="@{/css/lesson-form.css}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
 <div class="app">
@@ -29,10 +33,26 @@
 
             <div class="input-box-textarea" id="lesson-content">
                 <div class="label">Содержание урока</div>
-                <textarea th:field="*{text}"
+                <textarea id="summernote" th:field="*{text}"
                           th:classappend="${#fields.hasErrors('text')} ? input-error"
                           th:readonly="${#request.isUserInRole('ADMIN') ? 'false' : 'true'}">
-            </textarea>
+                </textarea>
+                <script>
+                    $('#summernote').summernote({
+                        placeholder: 'Hello stand alone ui',
+                        tabsize: 2,
+                        height: 300,
+                        toolbar: [
+                            ['style', ['style']],
+                            ['font', ['bold', 'underline', 'clear']],
+                            ['color', ['color']],
+                            ['para', ['ul', 'ol', 'paragraph']],
+                            ['table', ['table']],
+                            ['insert', ['link', 'picture', 'video']],
+                            ['view', ['fullscreen', 'codeview', 'help']]
+                        ]
+                    });
+                </script>
                 <span class="error" th:if="${#fields.hasErrors('text')}" th:errors="*{text}">Содержание урока должно быть заполнено</span>
             </div>
             <button class="custom-button" id="save-les-but" type="submit"

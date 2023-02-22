@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Добро пожаловать</title>
-    <link rel="stylesheet" th:href="@{/main.css}">
-    <link rel="stylesheet" th:href="@{/login-form.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/login-form.css}">
 </head>
 <body>
 <div class="login-container">
     <div class="login-form-part">
         <form class="login-form" th:action="@{/login}" method=post>
-            <div class="header">С возвращением!</div>
+            <div class="header">Добро пожаловать!</div>
             <div class="input-box">
                 <div class="label">Логин</div>
                 <input type="text" class="input" id="username" name="username"/>
