@@ -1,5 +1,9 @@
 # Сайт для обучения детей Java
 
+## Логин / Пароль
+### admin / admin
+### student / student
+
 ## Окно авторизации
 ![1.png](images%2F1.png)
 
